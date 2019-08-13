@@ -1,1 +1,1 @@
-<button class="btn ghe" [ngClass]="{gheDangChon: trangThaiChon, gheDaChon: ghe.TrangThai}" (click)="chonGhe()">{{ghe.SoGhe}}</button>
+<button class="btn ghe" [ngClass]="{gheDangChon: trangThaiChon, gheDaChon: ghe.TrangThai}" [disabled]="ghe.TrangThai" (click)="chonGhe()">{{ghe.SoGhe}}</button>
