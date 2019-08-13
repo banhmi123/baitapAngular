@@ -1,0 +1,10 @@
+<h3 style="color: red">Oneway binding</h3>
+<!-- Interpolation -->
+<div>{{name}}</div>
+
+<!-- Property binding -->
+<input type="text" [value]="name" #thamso>
+
+<!-- Event Binding -->
+<button class="btn btn-success" (click)="eventBinding(thamso.value)">Event Binding</button>
+<p>Muốn SD ở đây: {{name2}} </p>

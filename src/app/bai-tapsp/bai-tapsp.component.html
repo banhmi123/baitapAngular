@@ -1,0 +1,48 @@
+<h3 style="text-align: center">Bài Tập Thêm SP</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="form-group">
+                <label for="">Mã SP</label>
+                <input type="text" name="masp" #masp><br>
+                <label for="">Tên SP</label>
+                <input type="text" name="tensp" #tensp><br>
+                <label for="">Giá SP</label>
+                <input type="text" name="giasp" #giasp>
+            </div>
+            <button class="btn btn-success" (click)="ThemSP(masp.value,tensp.value,giasp.value)">Thêm SP</button>
+        </div>
+        <div class="col-sm-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã SP</th>
+                        <th>Tên SP</th>
+                        <th>Giá SP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngIf="danhSachSP && danhSachSP.length > 0">
+
+                        <tr *ngFor="let sanPham of danhSachSP; let stt =index" [ngClass]="{bgColor:stt %2 ===0}">
+                            <td>{{stt +1 }}</td>
+                            <td>{{sanPham.MaSP}}</td>
+                            <td>{{sanPham.TenSP}}</td>
+                            <td>{{sanPham.GiaSP}}</td>
+                        </tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- <ng-template #template>
+    <div>
+        CyberSoft
+    </div>
+</ng-template>
+<ng-container *ngTemplateoutlet="template">
+
+</ng-container> -->
